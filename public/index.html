@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ZAMPO HTML HOSTING</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<div class="blob cyan"></div>
+<div class="blob green"></div>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/">
+      <span class="bolt">⚡</span>
+      <span class="grad">ZAMPO HTML HOSTING</span>
+    </a>
+    <span class="user-chip">
+      <span class="avatar" id="avatar">?</span>
+      <span id="uidShort">visitor</span>
+    </span>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="dash-header">
+    <h1>📤 <span class="grad">Site အသစ် တင်မယ်</span></h1>
+    <span class="user-chip">📦 Sites: <b id="siteCount">0</b></span>
+  </div>
+
+  <div class="panel">
+    <div id="drop" class="drop">
+      <span class="big-icon">📦</span>
+      <p><b>.html</b> သို့မဟုတ် <b>.zip</b> ကို ဒီကို ဆွဲချပါ</p>
+      <p class="small">သို့မဟုတ် နှိပ်ပြီး ရွေးပါ (Max 25 MB)</p>
+      <input type="file" id="fileInput" accept=".html,.htm,.zip" hidden />
+    </div>
+
+    <div id="fileChip" class="file-chip hide">
+      <span id="fileName">—</span>
+      <button class="remove" id="removeFile">✕</button>
+    </div>
+
+    <input type="text" id="siteName" class="input" placeholder="Site နာမည် (optional)" maxlength="60" style="margin-top:14px;" />
+
+    <button id="uploadBtn" class="btn btn-primary" style="width:100%; margin-top:14px;" disabled>
+      🚀 Upload & Host
+    </button>
+
+    <div class="progress-track" id="progressTrack">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="alert" id="uploadAlert"></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>🌐 သင့် Sites</h2>
+      <button id="refreshBtn" class="btn btn-ghost btn-sm">🔄 Refresh</button>
+    </div>
+    <div id="sitesList" class="site-grid">
+      <div class="empty"><span class="big">📭</span>Site တွေ မရှိသေးပါ</div>
+    </div>
+  </div>
+</div>
+
+<footer>© <span id="year"></span> <span class="grad">ZAMPO HTML HOSTING</span></footer>
+
+<div class="toast-host" id="toastHost"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
